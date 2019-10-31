@@ -1,4 +1,4 @@
-package com.pt.statemachinedemo.ui.activities
+package com.pt.statemachinedemo.ui.activities.main
 
 import android.os.Bundle
 import com.pt.statemachinedemo.R

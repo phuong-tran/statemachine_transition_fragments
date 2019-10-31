@@ -3,9 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginStart="20dp"
+    android:layout_marginTop="40dp"
     android:layout_marginEnd="20dp"
-    android:orientation="vertical"
-    android:layout_marginTop="40dp">
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,23 +15,23 @@
 
         <TextView
             android:id="@+id/textOperator"
-            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
             android:layout_marginBottom="20dp"
-            android:textStyle="bold"
-            android:text="Operator: " />
+            android:gravity="center"
+            android:text="Operator: "
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textResult"
-            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
             android:layout_marginBottom="20dp"
-            android:textStyle="bold"
-            android:text="Result: " />
+            android:gravity="center"
+            android:text="Result: "
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
@@ -66,17 +66,19 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/btnAbout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="About" />
+
+        <Button
             android:id="@+id/btnCalculate"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Calculate" />
+
+
     </LinearLayout>
 </LinearLayout>
-
-    <!-- <Button
-         android:id="@+id/btnQuit"
-         android:layout_width="0dp"
-         android:layout_height="wrap_content"
-         android:layout_weight="1"
-         android:text="Quit" />-->

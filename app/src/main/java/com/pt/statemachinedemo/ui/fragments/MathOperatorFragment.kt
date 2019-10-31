@@ -45,6 +45,10 @@ class MathOperatorFragment : BaseStateFragment() {
                 DIVISION -> updateResult(numbers.first / numbers.second)
             }
         }
+
+        btnAbout.setOnClickListener {
+            changeStateWithEvent(State.AboutState, Event.EmptyEvent)
+        }
     }
 
     private fun getNumbers(): Pair<Double, Double> {

@@ -1,8 +1,9 @@
-package com.pt.statemachinedemo.ui.activities
+package com.pt.statemachinedemo.ui.activities.main
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.pt.statemachinedemo.R
+import com.pt.statemachinedemo.ui.fragments.AboutFragment
 import com.pt.statemachinedemo.ui.fragments.MainDashboardFragment
 import com.pt.statemachinedemo.ui.fragments.MathOperatorFragment
 import common.*
@@ -42,6 +43,14 @@ fun MainActivity.graphBuilder(): StateMachine.GraphBuilder<State, Event, SideEff
                 transitionTo(
                     State.CalculateState,
                     SideEffect.OperatorSideEffect.DivisionOperatorSideEffect
+                )
+            }
+        }
+
+        state<State.AboutState> {
+            on<Event.EmptyEvent> {
+                transitionTo(
+                    State.AboutState
                 )
             }
         }
@@ -98,6 +107,15 @@ fun MainActivity.doStateHandler(
                     )
                 }
             }
+        }
+
+        State.AboutState -> {
+            addOrReplaceFragment(
+                fragment =
+                AboutFragment.newInstance(),
+                isAddToBackStack = true,
+                isAdd = false
+            )
         }
     }
 }

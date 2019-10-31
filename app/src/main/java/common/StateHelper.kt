@@ -8,6 +8,7 @@ const val DIVISION = 4
 sealed class State {
     object MainDashBoardState : State()
     object CalculateState : State()
+    object AboutState: State()
 }
 
 sealed class Event {
