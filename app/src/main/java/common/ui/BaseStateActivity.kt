@@ -9,7 +9,7 @@ abstract class BaseStateActivity : AppCompatActivity(), StateMachineNavigator {
 
     abstract fun provideGraphBuilder(): StateMachine.GraphBuilder<State, Event, SideEffect>
 
-    abstract fun doTransition(fromState: State, toState: State, event: Event, sideEffect: SideEffect?)
+    abstract fun handleState(fromState: State, toState: State, event: Event, sideEffect: SideEffect?)
 
     private fun jumpToState(state: State): StateMachine<State, Event, SideEffect> {
         return stateMachine.with { initialState(state) }
@@ -38,7 +38,7 @@ abstract class BaseStateActivity : AppCompatActivity(), StateMachineNavigator {
                 onTransition {
                     val validTransition = it as? StateMachine.Transition.Valid ?: return@onTransition
                     validTransition.apply {
-                        doTransition(fromState, toState, event, sideEffect)
+                        handleState(fromState, toState, event, sideEffect)
                     }
                 }
             }
