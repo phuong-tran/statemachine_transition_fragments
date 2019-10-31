@@ -67,11 +67,7 @@ fun AppCompatActivity.addOrReplaceFragment(
 ) {
     supportFragmentManager.beginTransaction().apply {
         if (isAdd) {
-            if (tag.isNullOrBlank()) {
-                add(holder, fragment)
-            } else {
-                add(holder, fragment, tag)
-            }
+            add(holder, fragment, if (tag.isNullOrBlank()) null else tag)
         } else {
             replace(holder, fragment)
         }
