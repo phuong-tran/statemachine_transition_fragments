@@ -36,9 +36,4 @@ abstract class BaseStateFragment : Fragment(), StateMachineNavigator {
     override fun changeState(state: State) {
         stateMachineNavigator?.changeState(state)
     }
-
-    override fun onResume() {
-        super.onResume()
-        stateMachineNavigator?.changeState(provideState())
-    }
 }
