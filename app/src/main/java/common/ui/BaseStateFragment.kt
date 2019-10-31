@@ -9,8 +9,6 @@ import common.StateMachineNavigator
 abstract class BaseStateFragment : Fragment(), StateMachineNavigator {
     private var stateMachineNavigator: StateMachineNavigator? = null
 
-    abstract fun provideState(): State
-
     override fun onAttach(context: Context) {
         super.onAttach(context)
         if (context is StateMachineNavigator) {

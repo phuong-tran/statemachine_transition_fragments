@@ -38,10 +38,7 @@ class MainDashboardFragment : BaseStateFragment() {
 
     }
 
-    override fun provideState(): State = State.MainDashBoardState
-
     companion object {
-        @JvmStatic
         fun newInstance() = MainDashboardFragment()
     }
 }

@@ -15,9 +15,8 @@ class MathOperatorFragment : BaseStateFragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        operator = savedInstanceState?.getInt(OPERATOR) ?: arguments!!.getInt(
-            OPERATOR
-        )
+        requireArguments()
+        operator = arguments!!.getInt(OPERATOR)
     }
 
     override fun onCreateView(
@@ -62,11 +61,8 @@ class MathOperatorFragment : BaseStateFragment() {
         return Pair(number1, number2)
     }
 
-    override fun provideState() = State.CalculateState
-
     companion object {
         private const val OPERATOR = "OPERATOR"
-        @JvmStatic
         fun newInstance(operator: Int) =
             MathOperatorFragment().apply {
                 arguments = Bundle().apply {
