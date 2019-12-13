@@ -1,8 +1,8 @@
-package common.ui
+package base.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import common.*
+import base.*
 
 abstract class BaseStateActivity : AppCompatActivity(), StateMachineNavigator {
     private lateinit var stateMachine: StateMachine<State, Event, SideEffect>

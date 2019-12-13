@@ -1,4 +1,4 @@
-package common
+package base
 
 interface StateMachineNavigator {
     fun changeStateWithEvent(state: State, event: Event)

@@ -2,11 +2,11 @@ package com.pt.statemachinedemo.ui.activities.main
 
 import android.os.Bundle
 import com.pt.statemachinedemo.R
-import common.Event
-import common.SideEffect
-import common.State
-import common.StateMachine
-import common.ui.BaseStateActivity
+import base.Event
+import base.SideEffect
+import base.State
+import base.StateMachine
+import base.ui.BaseStateActivity
 
 class MainActivity : BaseStateActivity() {
 
@@ -17,7 +17,7 @@ class MainActivity : BaseStateActivity() {
     }
 
     override fun provideGraphBuilder(): StateMachine.GraphBuilder<State, Event, SideEffect> {
-        return graphBuilder()
+        return provideGraphBuilderForMainActivity()
     }
 
     override fun handleState(

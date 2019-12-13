@@ -6,9 +6,9 @@ import com.pt.statemachinedemo.R
 import com.pt.statemachinedemo.ui.fragments.AboutFragment
 import com.pt.statemachinedemo.ui.fragments.MainDashboardFragment
 import com.pt.statemachinedemo.ui.fragments.MathOperatorFragment
-import common.*
+import base.*
 
-fun MainActivity.graphBuilder(): StateMachine.GraphBuilder<State, Event, SideEffect> {
+fun provideGraphBuilderForMainActivity(): StateMachine.GraphBuilder<State, Event, SideEffect> {
     return StateMachine.GraphBuilder<State, Event, SideEffect>().apply {
         initialState(State.MainDashBoardState)
         state<State.MainDashBoardState> {
@@ -48,6 +48,14 @@ fun MainActivity.graphBuilder(): StateMachine.GraphBuilder<State, Event, SideEff
         }
 
         state<State.AboutState> {
+            on<Event.EmptyEvent> {
+                transitionTo(
+                    State.AboutState
+                )
+            }
+        }
+
+        state<State.Catalog> {
             on<Event.EmptyEvent> {
                 transitionTo(
                     State.AboutState

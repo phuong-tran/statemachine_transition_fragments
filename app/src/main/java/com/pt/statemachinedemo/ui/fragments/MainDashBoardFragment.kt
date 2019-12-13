@@ -6,9 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import com.pt.statemachinedemo.R
 
-import common.Event
-import common.State
-import common.ui.BaseStateFragment
+import base.Event
+import base.State
+import base.ui.BaseStateFragment
 import kotlinx.android.synthetic.main.fragment_main_dash_board.*
 
 class MainDashboardFragment : BaseStateFragment() {

@@ -1,10 +1,10 @@
-package common.ui
+package base.ui
 
 import android.content.Context
 import androidx.fragment.app.Fragment
-import common.Event
-import common.State
-import common.StateMachineNavigator
+import base.Event
+import base.State
+import base.StateMachineNavigator
 
 abstract class BaseStateFragment : Fragment(), StateMachineNavigator {
     private var stateMachineNavigator: StateMachineNavigator? = null

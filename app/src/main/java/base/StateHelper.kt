@@ -1,11 +1,11 @@
-package common
+package base
 
 const val ADDITION = 1
 const val SUBTRACTION = 2
 const val MULTIPLICATION = 3
 const val DIVISION = 4
 
-sealed class State {
+open class State {
     object MainDashBoardState : State()
     object CalculateState : State()
     object AboutState: State()

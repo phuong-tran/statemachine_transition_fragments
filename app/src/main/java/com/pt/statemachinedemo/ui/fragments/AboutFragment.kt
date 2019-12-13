@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.pt.statemachinedemo.R
-import common.ui.BaseStateFragment
+import base.ui.BaseStateFragment
 
 class AboutFragment : BaseStateFragment() {
     override fun onCreateView(

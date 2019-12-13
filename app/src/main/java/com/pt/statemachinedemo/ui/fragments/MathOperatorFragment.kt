@@ -5,8 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.pt.statemachinedemo.R
-import common.*
-import common.ui.BaseStateFragment
+import base.*
+import base.ui.BaseStateFragment
 import kotlinx.android.synthetic.main.fragment_math_operator.*
 import java.lang.Exception
 
